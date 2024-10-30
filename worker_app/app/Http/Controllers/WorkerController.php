@@ -3,13 +3,14 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\Worker\StoreRequest;
+use App\Http\Requests\Worker\UpdateRequest;
 use App\Models\Worker;
 
 class WorkerController extends Controller
 {
     public function index()
     {
-        $workers = Worker::all();
+        $workers = Worker::paginate(1);
 
         return view('worker.index', compact('workers'));
     }
@@ -38,17 +39,19 @@ class WorkerController extends Controller
         return view('worker.edit', compact('worker'));
     }
 
-    public function update(Worker $worker)
+    public function update(UpdateRequest $request, Worker $worker)
     {
-        $worker->name = 'new name';
-        $worker->save();
+        $data = $request->validated();
+        $data['is_married'] = isset($data['is_married']);
+        $worker->update($data);
 
-        return 'Was updated';
+        return redirect()->route('worker.show', $worker->id);
     }
+
 
     public function delete(Worker $worker)
     {
         $worker->delete();
-        return 'Was deleted';
+        return redirect()->route('worker.index');
     }
 }

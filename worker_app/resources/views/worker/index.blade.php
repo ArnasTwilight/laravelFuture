@@ -24,9 +24,24 @@
         <div>
             <a href="{{ route('worker.edit', $worker->id) }}">Edit</a>
         </div>
+        <div>
+            <form action="{{ route('worker.delete', $worker->id) }}" method="post">
+                @csrf
+                @method('Delete')
+                <input type="submit" value="Delete">
+            </form>
+        </div>
     </div>
     <hr>
     @endforeach
+    <div class="my-nav">
+        {!! $workers->render() !!}
+    </div>
 </div>
+<style>
+    .my-nav svg{
+        width: 20px;
+    }
+</style>
 </body>
 </html>
