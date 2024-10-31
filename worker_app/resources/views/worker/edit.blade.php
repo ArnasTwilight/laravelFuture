@@ -1,11 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-<h1>Edit page</h1>
+@extends('layout.main')
+@section('content')
 <div>
     <div>
         <form action="{{ route('worker.update', $worker->id) }}" method="post">
@@ -54,5 +48,4 @@
         </form>
     </div>
 </div>
-</body>
-</html>
+@endsection

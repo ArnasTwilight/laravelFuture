@@ -1,11 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-<h1>Create page</h1>
+@extends('layout.main')
+@section('content')
 <div>
     <div>
         <form action="{{ route('worker.store') }}" method="post">
@@ -55,5 +49,4 @@
         </form>
     </div>
 </div>
-</body>
-</html>
+@endsection

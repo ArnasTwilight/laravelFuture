@@ -1,11 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-<h1>Show page</h1>
+@extends('layout.main')
+@section('content')
 <div>
     <div>
         <div> name: {{ $worker->name }}</div>
@@ -19,5 +13,4 @@
         </div>
     </div>
 </div>
-</body>
-</html>
+@endsection
