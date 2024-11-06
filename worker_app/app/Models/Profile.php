@@ -15,6 +15,6 @@ class Profile extends Model
 
     public function worker()
     {
-        return $this->belongsTo(Worker::class, 'worker_id', 'id');
+        return $this->belongsTo();
     }
 }
