@@ -11,3 +11,5 @@
 172.19.0.1 - - [07/Nov/2024:08:35:09 +0000] "GET /workers HTTP/1.1" 200 2220 "http://localhost:8877/workers/create" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:132.0) Gecko/20100101 Firefox/132.0"
 172.19.0.1 - - [07/Nov/2024:08:35:11 +0000] "POST /workers/1 HTTP/1.1" 302 374 "http://localhost:8877/workers" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:132.0) Gecko/20100101 Firefox/132.0"
 172.19.0.1 - - [07/Nov/2024:08:35:11 +0000] "GET /workers HTTP/1.1" 200 1342 "http://localhost:8877/workers" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:132.0) Gecko/20100101 Firefox/132.0"
+172.19.0.1 - - [07/Nov/2024:11:39:01 +0000] "GET / HTTP/1.1" 403 153 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:132.0) Gecko/20100101 Firefox/132.0"
+172.19.0.1 - - [07/Nov/2024:11:39:04 +0000] "GET /workers HTTP/1.1" 200 1342 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:132.0) Gecko/20100101 Firefox/132.0"
