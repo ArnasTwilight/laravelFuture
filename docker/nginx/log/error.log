@@ -1,0 +1,1 @@
+2024/11/07 08:16:38 [error] 20#20: *1 directory index of "/var/www/worker_app/public/" is forbidden, client: 172.19.0.1, server: , request: "GET / HTTP/1.1", host: "localhost:8877"
