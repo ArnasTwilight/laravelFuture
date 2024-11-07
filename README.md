@@ -1,4 +1,4 @@
 ## How to start
 
-- **composer install**
-- **docker compose up -d**
+- composer install
+- docker compose up -d
