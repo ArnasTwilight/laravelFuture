@@ -33,8 +33,8 @@ class DevCommand extends Command
      */
     public function handle()
     {
-        $this->prepareData();
-        $this->prepareManyToMany();
+//        $this->prepareData();
+//        $this->prepareManyToMany();
 
 //        $worker = Worker::find(5);
 //        $client = Client::find(2);
@@ -42,8 +42,12 @@ class DevCommand extends Command
 //        $worker->tags()->attach([1, 3]);
 //        $client->tags()->attach([2, 3]);
 
-        $tag = Tag::find(3);
-        dd($tag->clients->toArray());
+        $position = Position::first();
+
+        dd($position->queryWorker->toArray());
+
+//        $tag = Tag::find(3);
+//        dd($tag->clients->toArray());
 
         return 0;
     }
