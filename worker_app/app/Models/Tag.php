@@ -11,7 +11,12 @@ class Tag extends Model
 
     public function workers()
     {
+        return $this->morphedByMany(Worker::class, 'taggable');
+    }
 
+    public function clients()
+    {
+        return $this->morphedByMany(Client::class, 'taggable');
     }
 
 }

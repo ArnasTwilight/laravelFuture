@@ -8,6 +8,7 @@ use App\Models\Department;
 use App\Models\Position;
 use App\Models\Project;
 use App\Models\Review;
+use App\Models\Tag;
 use App\Models\Worker;
 use Illuminate\Console\Command;
 
@@ -32,16 +33,17 @@ class DevCommand extends Command
      */
     public function handle()
     {
-//        $this->prepareData();
-//        $this->prepareManyToMany();
+        $this->prepareData();
+        $this->prepareManyToMany();
 
-        $worker = Worker::find(5);
-        $client = Client::find(2);
-//        $avatar = Avatar::find(4);
+//        $worker = Worker::find(5);
+//        $client = Client::find(2);
+//
+//        $worker->tags()->attach([1, 3]);
+//        $client->tags()->attach([2, 3]);
 
-        $review = Review::find(1);
-
-        dd($review->reviewable->toArray());
+        $tag = Tag::find(3);
+        dd($tag->clients->toArray());
 
         return 0;
     }
